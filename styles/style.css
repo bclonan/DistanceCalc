@@ -1,0 +1,118 @@
+ body {
+   margin: 0;
+   font-family: sans-serif;
+ }
+
+ .hero {
+   /* Sizing */
+   width: 100vw;
+   height: 100vh;
+
+   /* Flexbox stuff */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   /* Text styles */
+   text-align: center;
+   color: white;
+
+   /* Background styles */
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1067784242%2F960x0.jpg%3Ffit%3Dscale');
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+ }
+
+ .hero h1 {
+   /* Text styles */
+   font-size: 5em;
+
+   /* Margins */
+   margin-top: 0;
+   margin-bottom: 0.5em;
+ }
+
+ .hero .btn {
+   /* Positioning and sizing */
+   display: block;
+   width: 50vw;
+
+   /* Padding and margins */
+   padding: 1em;
+   margin-top: 50px;
+   margin-left: auto;
+   margin-right: auto;
+
+   /* Text styles */
+   color: white;
+   text-decoration: none;
+   font-size: 1.5em;
+
+   /* Border styles */
+   border: 3px solid white;
+
+
+   /* Background styles */
+   background-color: rgba(16, 28, 177, 0.8);
+ }
+
+
+
+
+ .autocomplete {
+   /*the container must be positioned relative:*/
+   position: relative;
+   display: inline-block;
+   align-items: flex-start;
+ }
+
+ input {
+   border: 1px solid transparent;
+   background-color: #f1f1f1;
+   padding: 10px;
+   font-size: 16px;
+ }
+
+ input[type=text] {
+   background-color: #f1f1f1;
+   width: 100%;
+ }
+
+
+
+ .autocomplete-items {
+   position: absolute;
+   border: 1px solid #d4d4d4;
+   color: black;
+   border-bottom: none;
+   border-top: none;
+   z-index: 99;
+   /*position the autocomplete items to be the same width as the container:*/
+   top: 100%;
+   left: 0;
+   right: 0;
+ }
+
+ .autocomplete-items div {
+   padding: 10px;
+   cursor: pointer;
+   background-color: #fff;
+   border-bottom: 1px solid #d4d4d4;
+ }
+
+ .autocomplete-items div:hover {
+   /*when hovering an item:*/
+   background-color: #bfdcfd;
+ }
+
+ .autocomplete-active {
+   /*when navigating through the items using the arrow keys:*/
+   background-color: DodgerBlue !important;
+   color: #ffffff;
+ }
+
+ .hideMenu {
+   display: none;
+ }
