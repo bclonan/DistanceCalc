@@ -124,7 +124,7 @@
         if (!activeList) return false;
         removeActive(activeList);
         if (currentFocus >= activeList.length) currentFocus = 0;
-        if (currentFocus < 0) currentFocus = (activeList.length - 1); /*add class "autocomplete-active" :*/
+        if (currentFocus < 0) currentFocus = (activeList.length - 1);
         activeList[currentFocus].classList.add("autocomplete-active");
 
      }
@@ -182,22 +182,6 @@
      }
   }
 
-  function completeChecker(arrayItem, val) {
-
-     if (arrayItem.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-        let autocompleteItem = document.createElement("DIV");
-        autocompleteItem.innerHTML = "<strong>" + arrayItem.substr(0, val.length) + "</strong>";
-        autocompleteItem.innerHTML += arrayItem.substr(val.length);
-        autocompleteItem.innerHTML += "<input type='hidden' value='" + arrayItem + "'>";
-        autocompleteItem.addEventListener("click",
-           function (e) {
-              inp.value = this.getElementsByTagName("input")[0].value;
-              closeAllLists();
-              validateForm();
-           });
-        return autocompleteItem;
-     }
-  }
 
   function devToggle(callback) {
      let keySequence = [];

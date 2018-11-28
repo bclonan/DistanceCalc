@@ -1,7 +1,3 @@
-// Expect
-//contains
-//describe
-
 /* Define testing functions*/
 function describe(text, fn) {
   console.log('FUNCTION', text)
